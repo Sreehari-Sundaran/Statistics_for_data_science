@@ -1,6 +1,10 @@
 # Statistics for Data Science
 
-Basics(Introduction to Advanced Mathematics)
+## CONTENTS📝
+
+- [Basics (Introduction to Advanced Mathematics)](#basics-introduction-to-advanced-mathematics)
+
+## Basics (Introduction to Advanced Mathematics)
 
 * **Statistics**\-Analyzing data Obtained from a Sample  
 * **Sample**\-Part of Whole Population  
