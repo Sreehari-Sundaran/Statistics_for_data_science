@@ -31,7 +31,7 @@
     * Eg. 1,2,**3**,4,5  
   * If there are even number of terms,simply add the even number of terms and divide it by 2  
     * Eg 1,2,**3,4**,5,6  
-    * Median \=(4+3)/2=3.5  
+    * Median=(4+3)/2=3.5  
 * **Mode**  
   * The number that occurs most often  
     * Eg: 3,3,3,3,6,9  
@@ -102,13 +102,13 @@ Understanding these statistics helps in choosing the right plot for your data an
 1. **Histogram**(used for general distribution to identify outliers)  
    1. represent numerical data in form of graphs  
    2. It has only one axis  
-   3. X axis \- bin ranges ; Y axis \- information about the frequency of data (Bin-Seperation between bars)
+   3. X axis- bin ranges ; Y axis- information about the frequency of data (Bin-Seperation between bars)
 
 Histogram using Seaborn(library for making statistical graphics in Python)  
 ```python
 import seaborn as sns  
-penguins \= sns.load\_dataset("penguins")  
-sns.displot(penguins, x="flipper\_length\_mm")  
+penguins = sns.load_dataset("penguins")  
+sns.displot(penguins, x="flipper_length_mm")  
 ```
 ![image](https://github.com/user-attachments/assets/d865bfcd-2de4-453a-b52f-fd9840c1949f)
 
@@ -126,9 +126,9 @@ sns.displot(penguins, x="flipper\_length\_mm")
 BoxPlot using Seaborn  
 ```python
 import seaborn as sns  
-tips \= sns.load\_dataset('tips')  
-sns.set\_style("whitegrid")  
-sns.boxplot(x \= 'day', y \= 'total\_bill', data \= tips)
+tips = sns.load_dataset('tips')  
+sns.set_style("whitegrid")  
+sns.boxplot(x = 'day', y = 'total_bill', data = tips)
 ```
 ![image](https://github.com/user-attachments/assets/ab8827c1-d93c-4261-8d9c-81a200d60133)
 
@@ -144,9 +144,9 @@ Piechart using matplotlib
 ```python
 import matplotlib.pyplot as plt  
 import numpy as np  
-y \= np.array(\[35, 25, 25, 15\])  
-mylabels \= \["Apples", "Bananas", "Cherries", "Dates"\]  
-plt.pie(y, labels \= mylabels)  
+y = np.array([35, 25, 25, 15])  
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]  
+plt.pie(y, labels = mylabels)  
 plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/99759855-1d69-4ea8-ad68-ede16d42e260)
@@ -159,9 +159,9 @@ plt.show()
 BarPlot using seaborn  
 ```python
 import seaborn as sns  
-sns.set\_theme(style="whitegrid")  
-tips \= sns.load\_dataset("tips")  
-ax \= sns.barplot(x="day", y="total\_bill", data=tips)  
+sns.set_theme(style="whitegrid")  
+tips = sns.load_dataset("tips")  
+ax = sns.barplot(x="day", y="total_bill", data=tips)  
 ```
 ![image](https://github.com/user-attachments/assets/36f00713-e0d3-484a-8490-d3bbdef454ad)
 
@@ -176,7 +176,7 @@ ScatterPlot using seaborn
 ```python
 import seaborn as sns  
 sns.set(style='whitegrid')  
-fmri \=sns.load\_dataset("fmri")  
+fmri =sns.load_dataset("fmri")  
 sns.scatterplot(x="timepoint",y="signal",data=fmri)  
 ```
 ![image](https://github.com/user-attachments/assets/0c7c20b1-b56f-4d90-9386-f57d0abdcd45)
@@ -189,8 +189,8 @@ LinePlot using seaborn & matplotlib
 ```python
 import seaborn as sns  
 import matplotlib.pyplot as plt  
-data \= sns.load\_dataset("tips")  
-sns.lineplot(x="total\_bill", y="size", hue="sex", style="sex",data=data)  
+data = sns.load_dataset("tips")  
+sns.lineplot(x="total_bill", y="size", hue="sex", style="sex",data=data)  
 plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/85e5e1a0-fc21-4f18-ae95-9cc69d4a2961)
