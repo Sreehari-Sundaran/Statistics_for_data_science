@@ -1,5 +1,7 @@
 # Statistics for Data Science
 
+**<li>Check out my Portfolio**:<a href="https://github.com/lionheartsss1997"> Sreehari's Portfolio</a><br></li>
+
 ## CONTENTS📝
 
 - [Basics (Introduction to Advanced Mathematics)](#basics-introduction-to-advanced-mathematics)
