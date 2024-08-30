@@ -195,3 +195,104 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/85e5e1a0-fc21-4f18-ae95-9cc69d4a2961)
 
+* **Multivariate Plots**
+
+  * Involves **more than one type** of measurement or observation  
+  * More than one dependent variable  
+* Types  
+1. **Stacked Bar Plot**  
+     * **Series or columns of bars that are stacked** over one another  
+     * Shows comparison and composition of few variables
+
+**Stacked Bar Plot using seaborn & matplotlib** 
+```python
+#import libraries 
+import seaborn as sns
+import numpy as np 
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+
+#load dataset  
+tips= sns.load_dataset("tips")
+
+#set plot style: grey grid in the background: 
+sns.set_theme(style="darkgrid")
+
+# set the figure size 
+plt.figure(figsize=(8, 8))
+
+# top bar -> sum all values(smoker=No and smoker=Yes) to find y position of the bars  
+total = tips.groupby('day')['total_bill'\].sum().reset_index()
+
+# bar chart 1 -> top bars (group of 'smoker=No') 
+bar1 = sns.barplot(x="day",  y="total_bill", data=total, color='darkblue')
+
+# bottom bar ->  take only smoker=Yes values from the data 
+smoker = tips[tips.smoker=='Yes']
+
+# bar chart 2 -> bottom bars (group of 'smoker=Yes')  
+bar2 = sns.barplot(x="day", y="total_bill", data=smoker, estimator=sum, ci=None,  color='lightblue')
+
+# add legend 
+top_bar = mpatches.Patch(color='darkblue', label='smoker = No') 
+bottom_bar = mpatches.Patch(color='lightblue', label='smoker = Yes')
+plt.legend(handles=[top_bar, bottom_bar])
+
+# show the graph
+plt.show()
+```
+Output :  
+![image](https://github.com/user-attachments/assets/0c16f135-f174-44a6-95e0-0c47d387f841)
+
+
+2. **Multiple Scatter Plot**  
+     * A 3d scatter plot  
+     * Different **variables are combined to form co ordinates** in phase space  
+     * Multiple scatter plots can be graphed on the same plot using different x and y-axis data calling the function Matplotlib.pyplot.scatter() multiple times
+
+**Multiple Scatter Plot using matplotlib**  
+```python
+import matplotlib.pyplot as plt
+# Sample data for scatter plots  
+x1 = [1, 2, 3, 4, 5]  
+y1 = [2, 4, 5, 7, 6]
+
+x2 = [1, 2, 3, 4, 5]  
+y2 = [5, 7, 4, 2, 8]
+
+plt.figure(figsize=(8, 6))
+
+plt.scatter(x1, y1, color='r', label='Data 1') 
+plt.scatter(x2, y2, color='g', label='Data 2')
+
+plt.title('Multiple Scatter Plots in One Graph') 
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+
+plt.legend() 
+plt.show()
+```
+![image](https://github.com/user-attachments/assets/35a609cf-8908-4583-9759-04cb080dbf28)
+
+
+3. **Multiple Line Plot**  
+   * Displays **multiple Y field over a Single X field**
+
+**Multiple Line Plot using matplotlib** 
+```python
+import matplotlib.pyplot as plt
+lines = { 'Line 1': ([1, 2, 3, 4, 5], [4, 5, 6, 8, 10]),  
+           'Line 2': ([1, 2, 3, 4, 5], [1, 3, 5, 7, 9]),  }
+# Plotting the lines with labels  
+for label, (x, y) in lines.items():
+   plt.plot(x, y, label = label)  
+# Adding legend, x and y labels, and title for the lines
+plt.legend()  
+plt.xlabel('X-axis')  
+plt.ylabel('Y-axis')  
+plt.title('Multiple Line Plot') 
+# Displaying the plot  
+plt.show()  
+```
+![image](https://github.com/user-attachments/assets/ac70c480-8e21-427f-8ac2-db5ecf2628c3)
+
