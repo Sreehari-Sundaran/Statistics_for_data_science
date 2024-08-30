@@ -8,6 +8,9 @@
 - [Measure of Dispersion](#measure-of-dispersion)
 - [Python Codes for Practice](#python-codes-for-practice)
 - [Statistics Behind Plots](#statistics-behind-plots)
+  - [Univariate Plots](#univariate-plots)
+  - [Bivariate Plots](#bivariate-plots)
+  - [Multivariate Plots](#multivariate-plots)
 
 ## Basics (Introduction to Advanced Mathematics)
 
@@ -97,7 +100,8 @@ When visualizing data, it's important to understand the underlying statistics th
 
 Understanding these statistics helps in choosing the right plot for your data and interpreting the results accurately.
 
-* **Univariate Plots-** Refers to analysis of one variable or related to distribution of single variable  
+## Univariate Plots
+    * Refers to analysis of one variable or related to distribution of single variable  
   **Types**  
 1. **Histogram**(used for general distribution to identify outliers)  
    1. represent numerical data in form of graphs  
@@ -151,7 +155,8 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/99759855-1d69-4ea8-ad68-ede16d42e260)
 
-* **Bivariate Plots-** two variables are observed  
+## Bivariate Plots 
+  *two variables are observed  
   * One variable is dependent while other is independent<br>
   Types
 1. **Bar Plot**\-aggregating numerical and categorical data according to some methods
@@ -195,7 +200,7 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/85e5e1a0-fc21-4f18-ae95-9cc69d4a2961)
 
-* **Multivariate Plots**
+## Multivariate Plots
 
   * Involves **more than one type** of measurement or observation  
   * More than one dependent variable  
